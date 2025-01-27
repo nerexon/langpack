@@ -7,3 +7,7 @@ class languageManager {
 
     }
 }
+
+module.exports = {
+    languageManager
+}
