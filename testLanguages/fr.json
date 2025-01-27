@@ -1,0 +1,6 @@
+{
+    "greeting": "Bonjour {name} !",
+    "buttons": {
+      "cancel": "Annuler"
+    }
+}
