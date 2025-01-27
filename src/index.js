@@ -1,4 +1,4 @@
-const fs = require('fs');
+const { statSync } = require('fs');
 
 class languageManager {
     /**
@@ -7,7 +7,7 @@ class languageManager {
      */
     constructor(path) {
         try {
-            const stats = fs.statSync(path);
+            const stats = statSync(path);
             if (!stats.isDirectory()) {
                 throw new Error(`Path exists but is not a directory: ${path}`);
             }
