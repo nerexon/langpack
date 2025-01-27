@@ -1,0 +1,19 @@
+{
+  "name": "langpack.js",
+  "version": "1.0.0",
+  "description": "A simple but powerful language manager",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nerexon/langpack.git"
+  },
+  "author": "Alataq",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nerexon/langpack/issues"
+  },
+  "homepage": "https://nerexon.com/page/en/langpack"
+}
