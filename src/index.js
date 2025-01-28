@@ -78,7 +78,20 @@ class LanguageManager {
              */
             replacePlaceholders(template, values) {
                 return template.replace(/{(\w+)}/g, (match, key) => {
-                    return values.hasOwnProperty(key) ? values[key].toString() : match;
+                    if (!values.hasOwnProperty(key)) return match;
+                    
+                    const value = values[key];
+                    if (Array.isArray(value)) {
+                        return value
+                            .map(item => {
+                                if (typeof item === 'string' || typeof item === 'number') {
+                                    return item.toString();
+                                }
+                                return ''; // Filter out invalid types
+                            })
+                            .join(',');
+                    }
+                    return value.toString();
                 });
             }
         };
