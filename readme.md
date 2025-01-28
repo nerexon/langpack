@@ -1,4 +1,3 @@
-```markdown
 # Langpack.js  
 **Lightweight Language Management for Node.js**  
 Developed by Alataq · Maintained by Nerexon  
@@ -88,5 +87,4 @@ en.get('user.notifications', {count: 5});
 
 ## License  
 **ISC License**  
-Copyright © Nerexon  
-```
+Copyright © Nerexon
