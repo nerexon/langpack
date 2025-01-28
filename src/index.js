@@ -89,7 +89,7 @@ class LanguageManager {
                                 }
                                 return ''; // Filter out invalid types
                             })
-                            .join(',');
+                            .join(', ');
                     }
                     return value.toString();
                 });
