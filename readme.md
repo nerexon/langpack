@@ -17,15 +17,12 @@ npm install langpack.js
 2. **Initialize the manager**:  
 ```javascript
 const { LanguageManager } = require('langpack.js');
-const manager = new LanguageManager('./languages');
+const translator = new LanguageManager('./languages');
 ```  
 3. **Use translations**:  
 ```javascript
-const en = new manager.Translator('en');
-const fr = new manager.Translator('fr');
-
-console.log(en.get('greeting')); // "Hello"
-console.log(fr.get('user.welcome', {name: 'Pierre'})); // "Bienvenue Pierre !"
+console.log(translator.get("en", "greeting")); // "Hello"
+console.log(translator.get("fr", "user.welcome", {name: 'Pierre'})); // "Bienvenue Pierre !"
 ```  
 
 ---
@@ -72,7 +69,7 @@ console.log(fr.get('user.welcome', {name: 'Pierre'})); // "Bienvenue Pierre !"
 
 ### `Translator.get(key, [variables])`  
 ```javascript
-en.get('user.notifications', {count: 5});
+translator.get("en", "user.notifications", {count: 5});
 // Returns "You have 5 new messages"
 ```  
 
